@@ -31,6 +31,7 @@ $(document).ready(function () {
         //         color: "#fff",
         //     });
         // }
+
         if (livepage == "order_management") {
             //menu Orders
             $("li.nav-item[data-menu=order_management]").addClass("active");
@@ -46,6 +47,7 @@ $(document).ready(function () {
                 color: "#fff",
             });
         }
+
         if (livepage == "update_vendor_details") {
             //menu Vendor
             $("li.nav-item[data-menu=update_vendor_details]").addClass(
@@ -103,6 +105,38 @@ $(document).ready(function () {
                 "show"
             );
             var pageType = $("li.nav-item[data-menu=media_management]").attr(
+                "data-page"
+            );
+
+            $("a.nav-link[data-page=" + pageType + "]").css({
+                background: "#4b4abc",
+                color: "#fff",
+            });
+        }
+
+        if (livepage == "project_management") {
+            //menu Orders
+            $("li.nav-item[data-menu=project_management]").addClass("active");
+            $(
+                "li.nav-item[data-menu=project_management] div.collapse"
+            ).addClass("show");
+            var pageType = $("li.nav-item[data-menu=project_management]").attr(
+                "data-page"
+            );
+
+            $("a.nav-link[data-page=" + pageType + "]").css({
+                background: "#4b4abc",
+                color: "#fff",
+            });
+        }
+
+        if (livepage == "business_management") {
+            //menu Orders
+            $("li.nav-item[data-menu=business_management]").addClass("active");
+            $(
+                "li.nav-item[data-menu=business_management] div.collapse"
+            ).addClass("show");
+            var pageType = $("li.nav-item[data-menu=business_management]").attr(
                 "data-page"
             );
 

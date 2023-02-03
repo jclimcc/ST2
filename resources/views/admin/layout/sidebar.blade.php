@@ -37,7 +37,12 @@ ul.nav.flex-column.sub-menu{
             </a>
             <div class="collapse" id="media_management">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" data-page='banners' href="{{ url('admin/banners')}}">Banners</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='events' href="{{ url('admin/events')}}">Event</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='news' href="{{ url('admin/news')}}">News</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='press' href="{{ url('admin/press')}}">Press</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='videos' href="{{ url('admin/videos')}}">Video</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='banners' href="{{ url('admin/banners')}}">Main Banners</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='popup-banner' href="{{ url('admin/popup-banners')}}">Popup Banner</a></li>
                 </ul>
             </div>
         </li>
@@ -53,6 +58,31 @@ ul.nav.flex-column.sub-menu{
                 </ul>
             </div>
         </li>
+        <li class="nav-item"  data-menu="project_management" data-page='{{ Session::get('page-type') }}'>
+            <a class="nav-link" data-toggle="collapse" href="#project_management" aria-expanded="false" aria-controls="project_management">
+            <i class="icon-layout menu-icon"></i>
+            <span class="menu-title">Project Management</span>
+            <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="project_management">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" data-page='projects' href="{{ url('admin/projects')}}">Project</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item"  data-menu="business_management" data-page='{{ Session::get('page-type') }}'>
+            <a class="nav-link" data-toggle="collapse" href="#business_management" aria-expanded="false" aria-controls="business_management">
+            <i class="icon-layout menu-icon"></i>
+            <span class="menu-title">Business Management</span>
+            <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="business_management">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" data-page='business' href="{{ url('admin/business')}}">Business</a></li>
+                </ul>
+            </div>
+        </li>
+
         <li class="nav-item " data-menu="order_management" data-page='{{ Session::get('page-type') }}'>
             <a class="nav-link" data-toggle="collapse" href="#ui-order_management" aria-expanded="false" aria-controls="ui-order_management">
             <i class="icon-layout menu-icon"></i>

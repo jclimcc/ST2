@@ -61,6 +61,25 @@ Breadcrumbs::for('home.member.mycoupon', function (BreadcrumbTrail $trail){
     $trail->push('My Coupon', url('member/mycoupon'));
 });
 
+//START projects Management
+Breadcrumbs::for('admins.projects', function (BreadcrumbTrail $trail) {
+    $trail->push('Projects Management', url('admin/projects'));
+});
+Breadcrumbs::for('admins.projects.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.projects');
+    $trail->push($title, url('admin/add-edit-project',$title));
+});
+//END  projects Management
+//START Business Management
+Breadcrumbs::for('admins.businesses', function (BreadcrumbTrail $trail) {
+    $trail->push('Business Management', url('admin/business'));
+});
+Breadcrumbs::for('admins.businesses.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.businesses');
+    $trail->push($title, url('admin/add-edit-business',$title));
+});
+//END Business Management
+
 
 //START Admin Management
 Breadcrumbs::for('admins', function (BreadcrumbTrail $trail) {

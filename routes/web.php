@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/home',HomePage::class);
+Route::get('/home',HomePage::class);
 
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function(){
 
@@ -154,6 +154,21 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
          Route::match(['get','post'],'add-edit-banner/{id?}','BannerController@addEditBanner');
          Route::get('delete-banner-image/{id}','BannerController@deleteBannerImageStatus');
         
+        //Project Management
+        //Project
+         Route::get('projects','ProjectController@index'); 
+         Route::POST('update-project-status','ProjectController@updateProjectStatus');
+         Route::get('delete-project/{id}','ProjectController@deleteProjectStatus');
+         Route::match(['get','post'],'add-edit-project/{id?}','ProjectController@addEditProject');
+         Route::get('delete-project-image/{id}','ProjectController@deleteProjectImageStatus');
+
+        //Our Business
+        //Business
+        Route::get('business','BusinessController@index'); 
+        Route::POST('update-business-status','BusinessController@updateBusinessStatus');
+        Route::get('delete-business/{id}','BusinessController@deleteBusinessStatus');
+        Route::match(['get','post'],'add-edit-business/{id?}','BusinessController@addEditBusiness');
+        Route::get('delete-business-image/{id}','BusinessController@deleteBusinessImageStatus');
 
          
          //Coupon

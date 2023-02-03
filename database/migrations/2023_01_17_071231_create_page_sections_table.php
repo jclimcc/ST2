@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('layout')->default('custom');
             $table->integer('sequence')->default(0)->unsigned();
             $table->unsignedInteger('template_id');
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }
