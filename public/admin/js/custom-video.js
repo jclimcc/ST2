@@ -1,35 +1,35 @@
 $(document).ready(function () {
-    //Project/
-    $(".updateProjectStatus").click(function () {
-        var project_id = $(this).attr("project_id");
+    //Post/
+    $(".updateVideoStatus").click(function () {
+        var video_id = $(this).attr("video_id");
         var status = $(this).children("i").attr("status");
 
         $.ajax({
             type: "POST",
-            url: "/admin/update-project-status",
-            data: { project_id: project_id, status: status },
+            url: "/admin/update-video-status",
+            data: { video_id: video_id, status: status },
             headers: {
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
             },
             success: function (resp) {
                 if (resp["status"] == "1") {
-                    $("#project-" + resp["project_id"])
+                    $("#video-" + resp["video_id"])
                         .children("i")
                         .attr("class", "mdi mdi-bookmark-check");
-                    $("#project-" + resp["project_id"])
+                    $("#video-" + resp["video_id"])
                         .children("i")
                         .attr("style", "font-size:25px;color:green");
-                    $("#project-" + resp["project_id"])
+                    $("#video-" + resp["video_id"])
                         .children("i")
                         .attr("status", "1");
                 } else {
-                    $("#project-" + resp["project_id"])
+                    $("#video-" + resp["video_id"])
                         .children("i")
                         .attr("class", "mdi mdi-bookmark-outline");
-                    $("#project-" + resp["project_id"])
+                    $("#video-" + resp["video_id"])
                         .children("i")
                         .attr("style", "font-size:25px;color:red");
-                    $("#project-" + resp["project_id"])
+                    $("#video-" + resp["video_id"])
                         .children("i")
                         .attr("status", "0");
                 }
@@ -39,7 +39,7 @@ $(document).ready(function () {
             },
         });
     });
-    $("#projects-page").DataTable();
+    $("#posts-page").DataTable();
 
     //.confirmdelete sections
     $(document).on("click", ".confirmDelete", function () {

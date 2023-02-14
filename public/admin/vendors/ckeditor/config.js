@@ -9,6 +9,7 @@ CKEDITOR.editorConfig = function (config) {
     // https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html
 
     // The toolbar groups arrangement, optimized for two toolbar rows.
+
     config.toolbarGroups = [
         { name: "clipboard", groups: ["clipboard", "undo"] },
         { name: "editing", groups: ["find", "selection", "spellchecker"] },
@@ -39,4 +40,12 @@ CKEDITOR.editorConfig = function (config) {
 
     // Simplify the dialog windows.
     config.removeDialogTabs = "image:advanced;link:advanced";
+    config.filebrowserBrowseUrl = "/ckfinder/connector?command=Init";
+    config.filebrowserUploadUrl =
+        "/ckfinder/connector?command=QuickUpload&type=Files";
+    config.filebrowserImageUploadUrl =
+        "/ckfinder/connector?command=QuickUpload&type=Images";
+
+    config.filebrowserWindowWidth = "1000";
+    config.filebrowserWindowHeight = "700";
 };

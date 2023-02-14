@@ -170,7 +170,41 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
         Route::match(['get','post'],'add-edit-business/{id?}','BusinessController@addEditBusiness');
         Route::get('delete-business-image/{id}','BusinessController@deleteBusinessImageStatus');
 
-         
+        
+        //Post management
+     
+        Route::get('posts','PostController@index'); 
+        Route::match(['get','post'],'add-edit-post/{id?}','PostController@addEditPost');
+        Route::get('view-post/{id}','PostController@viewPost');
+        Route::get('delete-post/{id}','PostController@deletePostStatus');
+
+
+
+        //Post-Categories management
+        Route::get('posts-categories','CategoryController@index'); 
+        Route::match(['get','post'],'add-edit-post-category/{id?}','CategoryController@addEditCategory');
+        Route::get('view-post-category/{id}','CategoryController@viewPostCategory');
+       
+        Route::get('posts-tags','TagController@index'); 
+        Route::match(['get','post'],'add-edit-post-tag/{id?}','TagController@addEditTag');
+        Route::get('view-post-tag/{id}','TagController@viewPostTag');
+        Route::get('delete-tag/{id}','TagController@deleteTagStatus');
+
+        
+        //Media management
+        //Popup Banner
+        Route::get('popup-banners','PopupBannerController@index'); 
+        Route::match(['get','post'],'add-edit-popup-banner/{id?}','PopupBannerController@addEditPopupBanner');
+        Route::get('delete-popup-banner/{id}','PopupBannerController@deletePopupBannerStatus');
+        Route::get('delete-popup-banner-image/{id}','PopupBannerController@deletePopupBannerImageStatus');
+        Route::POST('update-popup-banner-status','PopupBannerController@updatePopupBannerStatus');
+
+        Route::get('videos','VideoController@index'); 
+        Route::match(['get','post'],'add-edit-video/{id?}','VideoController@addEditVideo');
+        Route::get('delete-video/{id}','VideoController@deleteVideoStatus');
+        Route::POST('update-video-status','VideoController@updateVideoStatus');
+        
+
          //Coupon
          Route::get('coupons','CouponController@coupon'); 
          //Coupon:status
@@ -186,8 +220,14 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
          Route::get('report-order-details','OrderController@ReportOrders');
          
 
+         Route::get('autocomplete-search-tag', [TypeaheadController::class, 'autocompleteSearchTag']);
     });
 });
+
+Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
+    ->name('ckfinder_connector');
+Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
+    ->name('ckfinder_browser');
 // Route::middleware([
 //     'auth:sanctum',
 //     config('jetstream.auth_session'),

@@ -43,6 +43,10 @@ class Kernel extends HttpKernel
             'throttle:api', 
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'ckfinder' => [
+            'web',
+            \App\Http\Middleware\CKFinderMiddleware::class,
+        ],
     ];
 
     /**

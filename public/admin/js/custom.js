@@ -145,7 +145,22 @@ $(document).ready(function () {
                 color: "#fff",
             });
         }
+        //Media managements
+        if (livepage == "post_management") {
+            //settings main update_admin_details
+            $("li.nav-item[data-menu=post_management]").addClass("active");
+            $("li.nav-item[data-menu=post_management] div.collapse").addClass(
+                "show"
+            );
+            var pageType = $("li.nav-item[data-menu=post_management]").attr(
+                "data-page"
+            );
 
+            $("a.nav-link[data-page=" + pageType + "]").css({
+                background: "#4b4abc",
+                color: "#fff",
+            });
+        }
         //dashboard
         if (livepage == "dashboard" || livepage == "")
             $("li.nav-item[data-menu=" + livepage + "]").addClass("active");
@@ -224,5 +239,5 @@ $(document).ready(function () {
         });
     });
 
-    $("#sections-page").DataTable();
+    // $("#sections-page").DataTable();
 });

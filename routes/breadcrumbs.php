@@ -80,6 +80,55 @@ Breadcrumbs::for('admins.businesses.add-edit', function (BreadcrumbTrail $trail,
 });
 //END Business Management
 
+//START Posts Management
+Breadcrumbs::for('admins.posts', function (BreadcrumbTrail $trail) {
+    $trail->push('Posts', url('admin/posts'));
+});
+Breadcrumbs::for('admins.posts.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.posts');
+    $trail->push($title, url('admin/add-edit-posts',$title));
+});
+//END Posts Management
+//START Posts categories Management
+Breadcrumbs::for('admins.posts.categories', function (BreadcrumbTrail $trail) {
+    $trail->push('Post Categories', url('admin/posts-categories'));
+});
+Breadcrumbs::for('admins.posts.categories.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.posts.categories');
+    $trail->push($title, url('admin/add-edit-categories',$title));
+});
+//END Posts categories Management
+//START Posts tags Management
+Breadcrumbs::for('admins.posts.tags', function (BreadcrumbTrail $trail) {
+    $trail->push('Post Tags', url('admin/posts-tags'));
+});
+Breadcrumbs::for('admins.posts.tags.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.posts.tags');
+    $trail->push($title, url('admin/add-edit-tags',$title));
+});
+//END Posts tags Management
+
+
+//START Popup Banner Management
+Breadcrumbs::for('admins.popup-banner', function (BreadcrumbTrail $trail) {
+    $trail->push('Popup Banner', url('admin/popup-banners'));
+});
+Breadcrumbs::for('admins.popup-banner.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.popup-banner');
+    $trail->push($title, url('admin/add-edit-popup-banner',$title));
+});
+//END  Popup Banner Management
+
+//START Video Management
+Breadcrumbs::for('admins.videos', function (BreadcrumbTrail $trail) {
+    $trail->push('Videos', url('admin/videos'));
+});
+Breadcrumbs::for('admins.videos.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.videos');
+    $trail->push($title, url('admin/add-edit-video',$title));
+});
+//END  Popup Banner Management
+
 
 //START Admin Management
 Breadcrumbs::for('admins', function (BreadcrumbTrail $trail) {

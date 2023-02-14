@@ -29,6 +29,20 @@ ul.nav.flex-column.sub-menu{
             </a>
         </li>
         @if(Auth::guard('admin')->user()->role=='admin')
+        <li class="nav-item"  data-menu="post_management" data-page='{{ Session::get('page-type') }}'>
+            <a class="nav-link" data-toggle="collapse" href="#post_management" aria-expanded="false" aria-controls="post_management">
+            <i class="icon-layout menu-icon"></i>
+            <span class="menu-title">Posts</span>
+            <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="post_management">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" data-page='posts' href="{{ url('admin/posts')}}">Posts</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='posts-categories' href="{{ url('admin/posts-categories')}}">Post Categories</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='posts-tags' href="{{ url('admin/posts-tags')}}">Post Tags</a></li>
+                </ul>
+            </div>
+        </li>
         <li class="nav-item"  data-menu="media_management" data-page='{{ Session::get('page-type') }}'>
             <a class="nav-link" data-toggle="collapse" href="#media_management" aria-expanded="false" aria-controls="media_management">
             <i class="icon-layout menu-icon"></i>
@@ -37,9 +51,6 @@ ul.nav.flex-column.sub-menu{
             </a>
             <div class="collapse" id="media_management">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" data-page='events' href="{{ url('admin/events')}}">Event</a></li>
-                    <li class="nav-item"> <a class="nav-link" data-page='news' href="{{ url('admin/news')}}">News</a></li>
-                    <li class="nav-item"> <a class="nav-link" data-page='press' href="{{ url('admin/press')}}">Press</a></li>
                     <li class="nav-item"> <a class="nav-link" data-page='videos' href="{{ url('admin/videos')}}">Video</a></li>
                     <li class="nav-item"> <a class="nav-link" data-page='banners' href="{{ url('admin/banners')}}">Main Banners</a></li>
                     <li class="nav-item"> <a class="nav-link" data-page='popup-banner' href="{{ url('admin/popup-banners')}}">Popup Banner</a></li>
