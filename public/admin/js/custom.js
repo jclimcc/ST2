@@ -31,7 +31,34 @@ $(document).ready(function () {
         //         color: "#fff",
         //     });
         // }
+        if (livepage == "contactus") {
+            //menu Orders
+            $("li.nav-item[data-menu=contactus]").addClass("active");
+            $("li.nav-item[data-menu=contactus] div.collapse").addClass("show");
+            var pageType = $("li.nav-item[data-menu=contactus]").attr(
+                "data-page"
+            );
 
+            $("a.nav-link[data-page=" + pageType + "]").css({
+                background: "#4b4abc",
+                color: "#fff",
+            });
+        }
+        if (livepage == "career_management") {
+            //menu Orders
+            $("li.nav-item[data-menu=career_management]").addClass("active");
+            $("li.nav-item[data-menu=career_management] div.collapse").addClass(
+                "show"
+            );
+            var pageType = $("li.nav-item[data-menu=career_management]").attr(
+                "data-page"
+            );
+
+            $("a.nav-link[data-page=" + pageType + "]").css({
+                background: "#4b4abc",
+                color: "#fff",
+            });
+        }
         if (livepage == "order_management") {
             //menu Orders
             $("li.nav-item[data-menu=order_management]").addClass("active");

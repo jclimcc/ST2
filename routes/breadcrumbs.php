@@ -127,7 +127,43 @@ Breadcrumbs::for('admins.videos.add-edit', function (BreadcrumbTrail $trail,$tit
     $trail->parent('admins.videos');
     $trail->push($title, url('admin/add-edit-video',$title));
 });
-//END  Popup Banner Management
+//END  Video Management
+
+
+//START contactus Management
+Breadcrumbs::for('admins.contactus', function (BreadcrumbTrail $trail) {
+    $trail->push('Contact Us', url('admin/contactus'));
+});
+Breadcrumbs::for('admins.contactus.view', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.contactus');
+    $trail->push($title, url('admin/view-contactus',$title));
+});
+//END  contactus Management
+
+//START Career Management
+Breadcrumbs::for('admins.careers', function (BreadcrumbTrail $trail) {
+    $trail->push('Careers', url('admin/careers'));
+});
+Breadcrumbs::for('admins.careers.add-edit', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.careers');
+    $trail->push($title, url('admin/careers/',$title));
+});
+Breadcrumbs::for('admins.careers.view', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.careers');
+    $trail->push($title, url('admin/careers/',$title));
+});
+Breadcrumbs::for('admins.careers.applied_applicant', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.careers');
+    $trail->push($title, url('admin/careers/',$title));
+});
+Breadcrumbs::for('admins.careers.jobapplicant', function (BreadcrumbTrail $trail) {
+    $trail->push('Job Applicant', url('admin/jobapplicants'));
+});
+Breadcrumbs::for('admins.careers.jobapplicant.view', function (BreadcrumbTrail $trail,$title) {
+    $trail->parent('admins.careers.jobapplicant');
+    $trail->push($title, url('admin/jobapplicants/',$title));
+});
+//END  Career Management
 
 
 //START Admin Management

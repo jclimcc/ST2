@@ -203,22 +203,16 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
         Route::match(['get','post'],'add-edit-video/{id?}','VideoController@addEditVideo');
         Route::get('delete-video/{id}','VideoController@deleteVideoStatus');
         Route::POST('update-video-status','VideoController@updateVideoStatus');
-        
-
-         //Coupon
-         Route::get('coupons','CouponController@coupon'); 
-         //Coupon:status
-         Route::POST('update-coupon-status','CouponController@updateCouponStatus');
-         Route::get('delete-coupon/{id}','CouponController@deleteCouponStatus');
-         Route::match(['get','post'],'add-edit-coupon/{id?}','CouponController@addEditCoupon');
-         Route::get('delete-coupon-image/{id}','CouponController@deleteCouponImageStatus');
-
-         //vendor Order
-        //  Route::get('orders','OrderController@orders');
-         Route::get('new-order-details','OrderController@orders');
-         Route::get('complete-order-details','OrderController@completeOrders');
-         Route::get('report-order-details','OrderController@ReportOrders');
+    
+         //ContactUs 
+         Route::resource('contactus', 'ContactUsController');        
+        //Career management
+         Route::resource('careers','CareerController'); 
+         Route::get('careers/{id}/jobapplicant','JobApplicantController@viewCareerApplicant');
+         Route::POST('update-career-status','CareerController@updateCareerStatus');
          
+         Route::resource('jobapplicants','JobApplicantController'); 
+     
 
          Route::get('autocomplete-search-tag', [TypeaheadController::class, 'autocompleteSearchTag']);
     });

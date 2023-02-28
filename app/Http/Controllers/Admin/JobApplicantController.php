@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ContactUs;
+use App\Models\Career;
+use App\Models\JobApplicant;
 use Illuminate\Http\Request;
 use Session;
-class ContactUsController extends Controller
+class JobApplicantController extends Controller
 {
     /**
         * Display a listing of the resource.
@@ -15,14 +16,14 @@ class ContactUsController extends Controller
         */
         public function index()
         {
-            $getContacts=ContactUs::get()->toArray();
+            $getJobApplicants=JobApplicant::with('career')->get()->toArray();
                
-              
-            $title="Contact Us";
-            Session::put('page','contactus');
-            Session::put('page-type','contactus');
             
-            return view('admin.contactus.index')->with(compact('getContacts','title'));
+            $title="Job Applicant";
+            Session::put('page','career_management');
+            Session::put('page-type','jobapplicants');
+            
+            return view('admin.careers.jobapplicants.index')->with(compact('getJobApplicants','title'));
         }
     
         /**
@@ -32,7 +33,7 @@ class ContactUsController extends Controller
             */
         public function create()
         {
-            //
+            
         }
     
         /**
@@ -40,9 +41,9 @@ class ContactUsController extends Controller
             *
             * @return Response
             */
-        public function store()
+        public function store(Request $request)
         {
-            //
+           
         }
     
         /**
@@ -53,15 +54,15 @@ class ContactUsController extends Controller
             */
         public function show($id)
         {
-           
-            $contact=ContactUs::find($id)->toArray();
+            $applicant=JobApplicant::with('career')->find($id)->toArray();
                
+           
+            $title="Applicant:".$applicant['name'];
+            Session::put('page','career_management');
+            Session::put('page-type','jobapplicants');
             
-            $title="View Inquiry";
-            Session::put('page','contactus');
-            Session::put('page-type','contactus');
-            
-            return view('admin.contactus.view_contactus')->with(compact('contact','title'));
+            return view('admin.careers.jobapplicants.view_applicant')->with(compact('applicant','title'));
+          
         }
     
         /**
@@ -72,7 +73,7 @@ class ContactUsController extends Controller
             */
         public function edit($id)
         {
-            //
+           
         }
     
         /**
@@ -81,9 +82,9 @@ class ContactUsController extends Controller
             * @param  int  $id
             * @return Response
             */
-        public function update($id)
+        public function update(Request $request,$id)
         {
-            //
+          
         }
     
         /**
@@ -96,4 +97,8 @@ class ContactUsController extends Controller
         {
             //
         }
+
+    
+
+   
 }

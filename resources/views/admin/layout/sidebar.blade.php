@@ -29,6 +29,7 @@ ul.nav.flex-column.sub-menu{
             </a>
         </li>
         @if(Auth::guard('admin')->user()->role=='admin')
+        
         <li class="nav-item"  data-menu="post_management" data-page='{{ Session::get('page-type') }}'>
             <a class="nav-link" data-toggle="collapse" href="#post_management" aria-expanded="false" aria-controls="post_management">
             <i class="icon-layout menu-icon"></i>
@@ -78,6 +79,25 @@ ul.nav.flex-column.sub-menu{
             <div class="collapse" id="project_management">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" data-page='projects' href="{{ url('admin/projects')}}">Project</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" data-menu="contactus"  data-page='{{ Session::get('page-type') }}'>
+            <a class="nav-link" href="{{ url('admin/contactus')}}" >
+            <i class="icon-grid menu-icon"></i>
+            <span class="menu-title">Contact Us</span>
+            </a>
+        </li>
+        <li class="nav-item"  data-menu="career_management" data-page='{{ Session::get('page-type') }}'>
+            <a class="nav-link" data-toggle="collapse" href="#career_management" aria-expanded="false" aria-controls="career_management">
+            <i class="icon-layout menu-icon"></i>
+            <span class="menu-title">Careers</span>
+            <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="career_management">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" data-page='careers' href="{{ url('admin/careers')}}">Careers</a></li>
+                    <li class="nav-item"> <a class="nav-link" data-page='jobapplicant' href="{{ url('admin/jobapplicants')}}">Job Applicants</a></li>
                 </ul>
             </div>
         </li>
