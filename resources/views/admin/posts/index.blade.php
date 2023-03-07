@@ -37,7 +37,7 @@
 				       
                     
                         <div class="table-responsive pt-3">
-                            <table class="table table-bordered" id="posts-page">
+                            <table class="table table-bordered nowrap dt-responsive" id="posts-page" >
                                 <thead>
                                     <tr>
                                         <th>#</th> 
@@ -51,8 +51,8 @@
                                     <tr>
                                         <td>{{ $post['id']}}</td>
                                         <td>
-                                            <a>
-                                                {{ $post['title'] }}
+                                            <a href="#" title="{{$post['title'] }}">
+                                                {{ str_limit($post['title']) }}
                                             </a>
                                             <br />
                                             <small>
@@ -105,5 +105,6 @@
 @endsection
 
 @section('customjs')
+
 <script src="{{ url('admin/js/custom-post.js') }}"></script>
 @endsection

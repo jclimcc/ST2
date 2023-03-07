@@ -13,6 +13,7 @@ use Session;
 use Image;
 use Illuminate\Support\Str;
 use Auth;
+use Cocur\Slugify\Slugify;
 
 class PostController extends Controller
 {
@@ -85,16 +86,25 @@ class PostController extends Controller
     
             
             $post->user_id= Auth::guard('admin')->user()->id;  
-            $post->title= $data['title'];  
-            $slug = SlugService::createSlug(Post::class, 'slug', $data['title']);
-            $post->slug= $slug;  
+            if($post->title != $data['title'] )
+            {
+                $post->title= $data['title'];  
+            
+                $translate=Str::ascii($data['title'],'zh');
+                 // Remove all symbols
+                $titleFilter = preg_replace('/[^a-zA-Z0-9]+/', ' ', $translate);            
+                 
+                $slug = SlugService::createSlug(Post::class, 'slug', $titleFilter);           
+              
+                $post->slug= $slug;
+            }
+            
             $post->excerpt= $data['excerpt'];    
             $post->body= htmlspecialchars($data['ckeditor-body'], ENT_QUOTES, 'UTF-8');     
             $post->featured= $data['featured']?:'0';     
             $post->is_published= $data['is_published']?:'0';     
            
             $post->save();
-
             if ($request->has('tags')) {
                 $post->tags()->sync($request->tags);
             }

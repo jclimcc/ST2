@@ -28,7 +28,7 @@
   @livewireStyles
 </head>
 
-<body class="stretched">
+<body class="stretched ">
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -36,20 +36,21 @@
 
 		<!-- Header
 		============================================= -->
-    @include('front.layout.header')
-    <!-- #header end -->
+		@include('front.layout.header')
+		<!-- #header end -->
 
 		
 		
-    @yield('content')
-    <!-- #content end -->
+		@yield('content')
+		<!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		@include('front.layout.footer')
-    <!-- #footer end -->
+			@include('front.layout.footer')
+		<!-- #footer end -->
 
-	</div><!-- #wrapper end -->
+	</div>
+	<!-- #wrapper end -->
 
 	<!-- Go To Top
 	============================================= -->

@@ -34,6 +34,107 @@
       
         .tp-caption { white-space: nowrap; }
       
+		
+		@media all and (max-width: 800px) {
+		.owl-carousel .portfolio-item img {
+			height: auto;
+			max-height: 100%;
+		}
+		.carousel-section{
+			background-position: center;
+			background-size: cover;
+		}
+		}
+
+
+.cloud-container1 {
+    top: 0;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%)
+}
+.cloud-container1 {
+
+	/* height: 55vw; */
+	max-height: 375px;
+    min-height: 200px;
+    /* overflow: hidden; */
+    pointer-events: none;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+	
+}
+.cloud-container2 {
+    bottom: -363px;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%)
+}
+.cloud-container2 {
+    height: 55vw;
+    max-height: 375px;
+    min-height: 200px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2
+}
+.bg-gradient__linear--sky-fade {
+    background: -webkit-gradient(linear,left bottom, left top,from(#dfebf4),to(rgba(223,235,244,0)));
+    background: linear-gradient(0deg,#dfebf4,rgba(223,235,244,0));
+}
+.bg-gradient__linear--sky-fade-top {
+    background: -webkit-gradient(linear,left bottom, left top,from(#dfebf4),to(rgba(223,235,244,0)));
+    background: linear-gradient(180deg,#dfebf4,rgba(223,235,244,0));
+}
+.cloud-1 {
+  position: absolute;
+  top: -100px;
+  left: -300px;
+  animation: moveCloud 70s linear infinite;
+}
+
+.cloud-2 {
+  position: absolute;
+  top: -110px;
+  right: -300px;
+  animation: moveCloud 40s linear infinite;
+}
+
+
+.cloud-5 {
+  position: absolute;
+  top: -30px;
+  left: -300px;
+  animation: moveCloud 70s linear infinite;
+}
+
+.cloud-6 {
+  position: absolute;
+  top: -10px;
+  right: -300px;
+  animation: moveCloud 40s linear infinite;
+}
+
+@keyframes moveCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1200px);
+  }
+}
+@media all and (max-width: 800px) {
+	.cloud-container2 {
+			bottom:-200px;
+		}
+		
+		}
+ 	
       </style>
 @endsection
 
@@ -43,519 +144,335 @@
 
 <!-- Content
 		============================================= -->
-		<section id="content">
+		<section id="content" >
 			<div class="content-wrap">
 
-				<div class="promo promo-light promo-full bottommargin-lg header-stick border-top-0 p-5">
-					<div class="container clearfix">
-						<div class="row align-items-center">
-							<div class="col-12 col-lg">
-								<h3>Try Premium Free for <span>30 Days</span> and you'll never regret it!</h3>
-								<span>Starts at just <em>$0/month</em> afterwards. No Ads, No Gimmicks and No SPAM. Just Real Content.</span>
-							</div>
-							<div class="col-12 col-lg-auto mt-4 mt-lg-0">
-								<a href="#" class="button button-large button-circle m-0">Start Trial</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div class="container clearfix">
-
-					<div class="row col-mb-50">
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box fbox-center fbox-light fbox-effect border-bottom-0">
-								<div class="fbox-icon">
-									<a href="#"><i class="i-alt border-0 icon-shop"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>e-Commerce Solutions<span class="subtitle">Start your Own Shop today</span></h3>
-								</div>
-							</div>
+					<div class="row align-items-center col-mb-50 mb-5">
+						<div class="col-md-4 center">
+							<img data-animate="fadeInLeft" src="images/home/homecompanyLOGO.jpg" alt="Iphone" class="fadeInLeft animated">
 						</div>
 
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box fbox-center fbox-light fbox-effect border-bottom-0">
-								<div class="fbox-icon">
-									<a href="#"><i class="i-alt border-0 icon-wallet"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Easy Payment Options<span class="subtitle">Credit Cards &amp; PayPal Support</span></h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box fbox-center fbox-light fbox-effect border-bottom-0">
-								<div class="fbox-icon">
-									<a href="#"><i class="i-alt border-0 icon-megaphone"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Instant Notifications<span class="subtitle">Realtime Email &amp; SMS Support</span></h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box fbox-center fbox-light fbox-effect border-bottom-0">
-								<div class="fbox-icon">
-									<a href="#"><i class="i-alt border-0 icon-fire"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Hot Offers Daily<span class="subtitle">Upto 50% Discounts</span></h3>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="line"></div>
-
-					<div class="row col-mb-50">
-						<div class="col-md-5">
-							<a href="https://vimeo.com/101373765" class="d-block position-relative rounded overflow-hidden" data-lightbox="iframe">
-								<img src="images/others/1.jpg" alt="Image" class="w-100">
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark">
-										<i class="i-circled i-light icon-line-play m-0"></i>
-									</div>
-									<div class="bg-overlay-bg op-06 dark"></div>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-7">
+						<div class="col-md-8 text-center text-md-start">
 							<div class="heading-block">
-								<h2>Globally Preferred Ecommerce Platform</h2>
+								<h3>WELCOME TO  <span>SHENG TAI INTERNATIONAL</span></h3>
 							</div>
 
-							<p>Worldwide John Lennon, mobilize humanitarian; emergency response donors; cause human experience effect. Volunteer Action Against Hunger Aga Khan safeguards women's.</p>
-
-							<div class="row col-mb-30">
-								<div class="col-sm-6 col-md-12 col-lg-6">
-									<ul class="iconlist iconlist-color mb-0">
-										<li><i class="icon-caret-right"></i> Responsive Ready Layout</li>
-										<li><i class="icon-caret-right"></i> Retina Display Supported</li>
-										<li><i class="icon-caret-right"></i> Powerful &amp; Optimized Code</li>
-										<li><i class="icon-caret-right"></i> 380+ Templates Included</li>
-									</ul>
-								</div>
-
-								<div class="col-sm-6 col-md-12 col-lg-6">
-									<ul class="iconlist iconlist-color mb-0">
-										<li><i class="icon-caret-right"></i> 12+ Headers &amp; Menu Designs</li>
-										<li><i class="icon-caret-right"></i> Premium Sliders Included</li>
-										<li><i class="icon-caret-right"></i> Light &amp; Dark Colors</li>
-										<li><i class="icon-caret-right"></i> e-Commerce Design Included</li>
-									</ul>
-								</div>
-							</div>
+							<p>Sheng Tai International is a dynamic and diversified company specializing in development, real estate, investment management, and hospitality. We offer professional services with a warm, humanistic approach and cater to luxury, upscale, and economy markets.</p>
+							
 						</div>
+					</div>					
+					
+				</div>
+				
+				<div class="section carousel-section parallax m-0 dark skrollable skrollable-between" style="background-image: url(&quot;images/home/bg-carousel.jpg&quot;); min-height: 1500px; padding: 150px 0px; background-position: 0px -80%;" data-bottom-top="background-position:0% 20%;" data-top-bottom="background-position:0px 140%;">
+
+					<div class=" clearfix">
+							<div class="w-100 mh20 bg-gradient__linear--sky-fade-top position-absolute top-0" style="height:0vh;z-index:2"></div>
+							<div class="cloud-container1">
+								<div class="cloud-1">
+									<img class="img-fluid" src="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-02.png" srcset="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-02@2x.png 2x" width="892" height="322" alt="Cloud">
+								</div>
+						
+									<div class="cloud-2">
+									<img class="img-fluid" src="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-01.png" srcset="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-01@2x.png 2x" width="904" height="375" alt="Cloud">
+								</div>
+							</div>
+						
+
+						
+							<div class="row align-items-center col-mb-50">
+								@include('front.home.business_services')
+							</div>
+							<div class="w-100 mh20 bg-gradient__linear--sky-fade position-absolute bottom-0" style="height:30vh;"></div>
+							<div class="cloud-container2">
+								<div class="cloud-5">
+									<img class="img-fluid" src="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-02.png" srcset="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-02@2x.png 2x" width="892" height="322" alt="Cloud">
+								</div>
+						
+									<div class="cloud-6">
+									<img class="img-fluid" src="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-01.png" srcset="https://www.sunway.com.my/wp-content/themes/sunway2020/img/home/cloud-01@2x.png 2x" width="904" height="375" alt="Cloud">
+								</div>
+							</div>
+							
+
+						</div>
+
 					</div>
 
-				</div>
-
-				<div class="section topmargin-lg">
-					<div class="container clearfix">
+					<div class="container pt-5 clearfix">
 
 						<div class="heading-block center">
-							<h2>Features that you are gonna Love</h2>
-							<span>Canvas comes with 100+ Feature oriented Shortcodes that are easy to use too.</span>
+							<h3>Some of our <span>Featured</span> Works</h3>
+							<span>We have worked on some Awesome Projects that are worth boasting of.</span>
 						</div>
+						
+						<div class="row gutter-40 col-mb-80">
+							<div class="postcontent col-lg-9">
+								<div class="fancy-title title-border">
+									<h4>News</h4>
+								</div>
+								<div class="row gutter-40">
+									<div class="entry col-12">
+										<div class="w-100">
+											<div class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
 
-						<div class="row justify-content-center col-mb-50">
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-phone2"></i></a>
+									<div class="oc-item posts-md">
+										<div class="entry ">
+											<div class="grid-inner">
+											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
+											<a href="#"><img src="front/posts/test1.jpg" alt="Image" style="width: 100%;height: auto;"></a>
+											</div>
+											<div class="entry-title title-sm nott">
+											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
+											</div>
+											<div class="entry-meta">
+											<ul>
+											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+											</ul>
+											</div>
+											<div class="entry-content">
+											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
+											</div>
+											</div>
+										</div>
 									</div>
-									<div class="fbox-content">
-										<h3>Responsive Layout</h3>
-										<p>Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+									<div class="oc-item posts-md">
+										<div class="entry">
+											<div class="grid-inner">
+											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
+											<a href="#"><img src="front/posts/test2.jpg" alt="Image" style="width: 100%;height: auto;"></a>
+											</div>
+											<div class="entry-title title-sm nott">
+											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
+											</div>
+											<div class="entry-meta">
+											<ul>
+											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+											</ul>
+											</div>
+											<div class="entry-content">
+											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
+											</div>
+											</div>
+										</div>
+									</div>
+									<div class="oc-item posts-md">
+										<div class="entry">
+											<div class="grid-inner">
+											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
+											<a href="#"><img src="front/posts/test2.jpg" alt="Image" style="width: 100%;height: auto;"></a>
+											</div>
+											<div class="entry-title title-sm nott">
+											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
+											</div>
+											<div class="entry-meta">
+											<ul>
+											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+											</ul>
+											</div>
+											<div class="entry-content">
+											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
+											</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="oc-item posts-md">
+										<div class="entry">
+											<div class="grid-inner">
+											<div class="entry-image"  style="width: 200px;height: 150px;overflow: hidden;">
+											<a href="#"><img src="front/posts/test3.jpg" alt="Image" style="width: 100%;height: auto;"></a>
+											</div>
+											<div class="entry-title title-sm nott">
+											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
+											</div>
+											<div class="entry-meta">
+											<ul>
+											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+											</ul>
+											</div>
+											<div class="entry-content">
+											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
+											</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="oc-item posts-md">
+										<div class="entry">
+											<div class="grid-inner">
+											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
+											<a href="#"><img src="front/posts/test4.jpg" alt="Image" style="width: 100%;height: auto;"></a>
+											</div>
+											<div class="entry-title title-sm nott">
+											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
+											</div>
+											<div class="entry-meta">
+											<ul>
+											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+											</ul>
+											</div>
+											<div class="entry-content">
+											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
+											</div>
+											</div>
+										</div>
+									</div>
+									
+
+								</div>
+								<div class="d-flex justify-content-between my-5">
+									
+									<a href="#" class="btn btn-outline-dark">More News</a>
+								</div>
+										</div>
+
+
+										<div class="fancy-title title-border">
+											<h4>Events</h4>
+										</div>
+										<div class="row posts-md col-mb-30">
+											<div class="entry col-md-6">
+												<div class="grid-inner">
+													<div class="entry-image">
+														<a href="#"><img src="images/magazine/thumb/11.jpg" alt="Image"></a>
+													</div>
+													<div class="entry-title title-sm nott">
+														<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+															<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+														</ul>
+													</div>
+													<div class="entry-content">
+														<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
+													</div>
+												</div>
+											</div>
+			
+											<div class="entry col-md-6">
+												<div class="grid-inner">
+													<div class="entry-image">
+														<a href="#"><img src="images/magazine/thumb/14.jpg" alt="Image"></a>
+													</div>
+													<div class="entry-title title-sm nott">
+														<h3><a href="blog-single.html">UK government weighs Tesla's Model S for its ??5 million electric vehicle fleet</a></h3>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
+															<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+														</ul>
+													</div>
+													<div class="entry-content">
+														<p>Urban public institutions life-saving women and children Rockefeller combat malaria honesty. Sustainability foster immunize treatment.</p>
+													</div>
+												</div>
+											</div>
+											
+											
+										</div>
+										
+									</div>
+									<div class="d-flex justify-content-between my-5">
+									
+										<a href="#" class="btn btn-outline-dark">More Events</a>
 									</div>
 								</div>
 							</div>
+							<div class="sidebar col-lg-3">
+								<div class="sidebar-widgets-wrap">
+									
+									<div class="fancy-title title-border">
+										<h4>Press Story</h4>
+									</div>
+										<div class="posts-sm row col-mb-30" id="post-list-sidebar">
+										<div class="entry col-12">
+										<div class="grid-inner row g-0">
+										<div class="col-auto">
+										<div class="entry-image">
+										<a href="#"><img src="images/magazine/small/3.jpg" alt="Image"></a>
+										</div>
+										</div>
+										<div class="col ps-3">
+										<div class="entry-title">
+										<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+										</div>
+										<div class="entry-meta">
+										<ul>
+										<li>10th July 2021</li>
+										</ul>
+										</div>
+										</div>
+										</div>
+										</div>
+										<div class="entry col-12">
+										<div class="grid-inner row g-0">
+										<div class="col-auto">
+										<div class="entry-image">
+										<a href="#"><img src="images/magazine/small/2.jpg" alt="Image"></a>
+										</div>
+										</div>
+										<div class="col ps-3">
+										<div class="entry-title">
+										<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+										</div>
+										<div class="entry-meta">
+										<ul>
+										<li>10th July 2021</li>
+										</ul>
+										</div>
+										</div>
+										</div>
+										</div>
+										<div class="entry col-12">
+										<div class="grid-inner row g-0">
+										<div class="col-auto">
+										<div class="entry-image">
+										<a href="#"><img src="images/magazine/small/3.jpg" alt="Image"></a>
+										</div>
+										</div>
+										<div class="col ps-3">
+										<div class="entry-title">
+										<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+										</div>
+										<div class="entry-meta">
+										<ul>
+										<li>10th July 2021</li>
+										</ul>
+										</div>
+										</div>
+										</div>
+										</div>
+										</div>
+										<div class="d-flex justify-content-between my-5">
+									
+											<a href="#" class="btn btn-outline-dark">More Press</a>
+										</div>
+										<div class="widget clearfix">
+											<div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-items="1" data-margin="10" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="true">
 
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="200">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-eye"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Retina Ready Graphics</h3>
-										<p>Looks beautiful &amp; ultra-sharp on Retina Displays with Retina Icons, Fonts &amp; Images.</p>
-									</div>
-								</div>
-							</div>
+												<div class="oc-item"><a href="#"><img src="front/posts/test4.jpg" alt="Clients"></a></div>
+												<div class="oc-item"><a href="#"><img src="front/posts/test4.jpg" alt="Clients"></a></div>
+												
+		
+											</div>
 
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="400">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-star2"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Powerful Performance</h3>
-										<p>Optimized code that are completely customizable and deliver unmatched fast performance.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="600">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-video"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>HTML5 Video</h3>
-										<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="800">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-params"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Parallax Support</h3>
-										<p>Display your Content attractively using Parallax Sections that have unlimited customizable areas.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="1000">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-fire"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Endless Possibilities</h3>
-										<p>Complete control on each &amp; every element that provides endless customization possibilities.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="1200">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-bulb"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Light &amp; Dark Color Schemes</h3>
-										<p>Change your Website's Primary Scheme instantly by simply adding the dark class to the body.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="1400">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-heart2"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Boxed &amp; Wide Layouts</h3>
-										<p>Stretch your Website to the Full Width or make it boxed to surprise your visitors.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-sm-6 col-lg-4">
-								<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="1600">
-									<div class="fbox-icon">
-										<a href="#"><i class="icon-note"></i></a>
-									</div>
-									<div class="fbox-content">
-										<h3>Extensive Documentation</h3>
-										<p>We have covered each &amp; everything in our Documentation including Videos &amp; Screenshots.</p>
-									</div>
+										</div>
 								</div>
 							</div>
 						</div>
-
 					</div>
-				</div>
-
-				<div class="container clearfix">
-
-					<div class="heading-block center">
-						<h3>Some of our <span>Featured</span> Works</h3>
-						<span>We have worked on some Awesome Projects that are worth boasting of.</span>
-					</div>
-
-					<div id="oc-portfolio" class="owl-carousel portfolio-carousel carousel-widget" data-margin="1" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-sm="2" data-items-md="3" data-items-xl="4">
-
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350">
-										<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350" data-lightbox="image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
-								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-							</div>
-						</div>
-
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/2.jpg" alt="Locked Steel Gate">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350">
-										<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350" data-lightbox="image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Locked Steel Gate</a></h3>
-								<span><a href="#">Illustrations</a></span>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="#">
-									<img src="images/portfolio/4/3.jpg" alt="Mac Sunglasses">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350">
-										<a href="https://vimeo.com/89396394" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-video.html">Mac Sunglasses</a></h3>
-								<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="#">
-									<img src="images/portfolio/4/4.jpg" alt="Morning Dew">
-								</a>
-								<div class="bg-overlay" data-lightbox="gallery">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-										<a href="images/portfolio/full/4.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-										<a href="images/portfolio/full/4-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-gallery.html">Morning Dew</a></h3>
-								<span><a href="#">Icons</a>, <a href="#">Illustrations</a></span>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/5.jpg" alt="Console Activity">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-										<a href="images/portfolio/full/5.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Console Activity</a></h3>
-								<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="portfolio-single-gallery.html">
-									<img src="images/portfolio/4/6.jpg" alt="Shake It!">
-								</a>
-								<div class="bg-overlay" data-lightbox="gallery">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-										<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-										<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-gallery.html">Shake It!</a></h3>
-								<span><a href="#">Illustrations</a>, <a href="#">Graphics</a></span>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="portfolio-single-video.html">
-									<img src="images/portfolio/4/7.jpg" alt="Backpack Contents">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-										<a href="https://www.youtube.com/watch?v=kuceVNBTJio" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-video.html">Backpack Contents</a></h3>
-								<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
-							</div>
-						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/8.jpg" alt="Sunset Bulb Glow">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-										<a href="images/portfolio/full/8.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Sunset Bulb Glow</a></h3>
-								<span><a href="#">Graphics</a></span>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="section topmargin-sm mb-0">
-
-					<div class="container clearfix">
-
-						<div class="heading-block center">
-							<h3>Testimonials</h3>
-							<span>Check out some of our Client Reviews</span>
-						</div>
-
-						<ul class="testimonials-grid grid-1 grid-md-2 grid-lg-3">
-							<li class="grid-item">
-								<div class="testimonial">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum repellendus!</p>
-										<div class="testi-meta">
-											John Doe
-											<span>XYZ Inc.</span>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="grid-item">
-								<div class="testimonial">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/2.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
-										<div class="testi-meta">
-											Collis Ta'eed
-											<span>Envato Inc.</span>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="grid-item">
-								<div class="testimonial">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/7.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Fugit officia dolor sed harum excepturi ex iusto magnam asperiores molestiae qui natus obcaecati facere sint amet.</p>
-										<div class="testi-meta">
-											Mary Jane
-											<span>Google Inc.</span>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="grid-item">
-								<div class="testimonial">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/3.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque. Repellendus, vero numquam?</p>
-										<div class="testi-meta">
-											Steve Jobs
-											<span>Apple Inc.</span>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="grid-item">
-								<div class="testimonial">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/4.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, perspiciatis illum totam dolore deleniti labore.</p>
-										<div class="testi-meta">
-											Jamie Morrison
-											<span>Adobe Inc.</span>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="grid-item">
-								<div class="testimonial">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/8.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Porro dolorem saepe reiciendis nihil minus neque. Ducimus rem necessitatibus repellat laborum nemo quod.</p>
-										<div class="testi-meta">
-											Cyan Ta'eed
-											<span>Tutsplus</span>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-
-					</div>
-
-				</div>
-
-				<div class="container clearfix">
-
-					<div id="oc-clients" class="owl-carousel owl-carousel-full image-carousel carousel-widget" data-margin="30" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6" style="padding: 20px 0;">
-
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/1.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/2.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/3.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/4.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/5.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/6.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/7.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/8.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/9.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="http://logofury.com/"><img src="images/clients/10.png" alt="Clients"></a></div>
-
-					</div>
-
-				</div>
-
+				
+				
 				<a href="#" class="button button-full center text-end footer-stick">
 					<div class="container clearfix">
 						Canvas comes with Unlimited Customizations &amp; Options. <strong>Check Out</strong> <i class="icon-caret-right" style="top:4px;"></i>
@@ -584,6 +501,7 @@
      var revapi31;
      var $ = jQuery.noConflict();
 
+	
      tpj(document).ready(function () {
        if (tpj("#rev_slider_679_1").revolution == undefined) {
          revslider_showDoubleJqueryError("#rev_slider_679_1");
@@ -612,12 +530,30 @@
                  swipe_direction: "horizontal",
                  drag_block_vertical: false,
                },
+			   bullets: { 
+				enable: true,
+				style: 'hesperiden',
+				tmp: '',
+				direction: 'horizontal',
+				rtl: false,
+				container: 'slider',
+				h_align: 'center',
+				v_align: 'bottom',
+				h_offset: 0,
+				v_offset: 20,
+				space: 5,
+				hide_onleave: false,
+				hide_onmobile: false,
+				hide_under: 0,
+				hide_over: 9999,
+				hide_delay: 200,
+				hide_delay_mobile: 1200
+				},
                arrows: {
-                 style: "hades",
+                 style: "hesperiden",
                  enable: true,
                  hide_onmobile: false,
                  hide_onleave: false,
-                 tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div></div>',
                  left: {
                    h_align: "left",
                    v_align: "center",
@@ -631,11 +567,14 @@
                    v_offset: 0,
                  },
                },
+			   
              },
              responsiveLevels: [1140, 1024, 778, 480],
              visibilityLevels: [1140, 1024, 778, 480],
-             gridwidth: [1140, 1024, 778, 480],
-             gridheight: [700, 768, 960, 720],
+            //  gridwidth: [1140, 1024, 778, 480],
+            //  gridheight: [700, 768, 960, 720],
+             gridwidth: [1650],
+             gridheight: [724],
              lazyType: "none",
              shadow: 0,
              spinner: "off",

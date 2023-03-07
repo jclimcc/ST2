@@ -39,7 +39,17 @@ $(document).ready(function () {
             },
         });
     });
-    $("#posts-page").DataTable();
+    $("#posts-page").DataTable({
+        columns: [
+            null, // use default column properties for the first column (#)
+            { width: "520px" }, // set width for the second column (Post Title)
+            null, // use default column properties for the third column (Published)
+            null, // use default column properties for the fourth column (Actions)
+        ],
+        columnDefs: [
+            { width: "520px", targets: 1 }, // targets column index 1 (Post Title)
+        ],
+    });
 
     //.confirmdelete sections
     $(document).on("click", ".confirmDelete", function () {
