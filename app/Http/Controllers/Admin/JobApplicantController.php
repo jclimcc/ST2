@@ -43,7 +43,66 @@ class JobApplicantController extends Controller
             */
         public function store(Request $request)
         {
+        
+        }
+        /**
+            * Store a newly created resource in storage.
+            *
+            * @return Response
+            */
+        public function applicantStore(Request $request)
+        {
+            $validatedData = \Validator::make($request->all(), [
+                'fname' => 'required',
+                'email' => 'required',
+                'phone' => 'required|regex:/^\+?\d{8,}$/',
+                'career_id' => 'required',
+                'cover_letter' => 'required',
+                'cvfile' => 'required|mimes:pdf,doc,docx'
+            ]);
+            if ($validatedData->fails()) {
+                return response()->json([
+                    'status' => 'error',
+                    'errors' => $validatedData->errors()
+                ]);
+        
+            }
+            
+            $fileName="";
            
+            if ($request->hasFile('cvfile')) {
+                $file = $request->file('cvfile');
+                if ($file->isValid()) {
+                    $allowedExtensions = ['doc', 'docx', 'pdf', 'txt'];
+                    $extension = strtolower($file->getClientOriginalExtension());
+                    if (in_array($extension, $allowedExtensions)) {
+                        $fileName = uniqid() . '_' . time() . '.' . $extension;
+                        $file->move(public_path('uploads/'), $fileName);
+                        
+                    } else {
+                        // handle invalid file type error
+                    }
+                }
+            }
+
+            $jobA = new JobApplicant();
+            $jobA->career_id  = $request->input('career_id');
+            $jobA->name = $request->input('fname');
+            $jobA->email = $request->input('email');
+            $jobA->phone = $request->input('phone');
+            $jobA->cover_letter = $request->input('cover_letter');
+            $jobA->resume = $fileName;
+            $jobA->save();
+
+
+            // $career = Career::create($validatedData);
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Application submitted successfully!'
+            ]);
+            // return redirect()->back()->with('success', 'Application submitted successfully!');
+            // return redirect()->back()
+            //     ->with('success', 'Career created successfully.');
         }
     
         /**

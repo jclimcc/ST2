@@ -13,19 +13,19 @@
 
                             <div class="widget clearfix">
 
-                                <img src="images/footer-widget-logo.png" alt="Image" class="footer-logo">
+                                <img src="{{ url('images/home/homecompanyLOGO.jpg')}}" width="200px" alt="Image" class="footer-logo">
 
-                                <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+                                <p><strong>Sheng Tai International Sdn Bhd</strong></p>
 
-                                <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+                                <div>
                                     <address>
                                         <strong>Headquarters:</strong><br>
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
+                                        103, block A , phileo Damansara II,<br>
+                                        No.15 , jalan PJU 16/11 , 46350 Petaling Jaya,<br>
+                                        Selangor Darul Ehsan, Malaysia<br>
                                     </address>
-                                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-                                    <abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
-                                    <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+                                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> +6011 3737 3399<br>
+                                    <abbr title="Email Address"><strong>Email:</strong></abbr> info@shengtaiinternational.com
                                 </div>
 
                             </div>
@@ -36,16 +36,25 @@
 
                             <div class="widget widget_links clearfix">
 
-                                <h4>Blogroll</h4>
+                                <h4>About us</h4>
 
                                 <ul>
-                                    <li><a href="https://codex.wordpress.org/">Documentation</a></li>
-                                    <li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-                                    <li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-                                    <li><a href="https://wordpress.org/support/">Support Forums</a></li>
-                                    <li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-                                    <li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
-                                    <li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+                                    <li><a href="{{ url('/about-us')}}">About Sheng Tai International</a></li>
+                                    <li><a href="{{ url('/founder-and-chairman')}}">Founder and Chairman</a></li>
+                                    <li><a href="{{ url('/awards')}}">Awards</a></li>
+                                    <li><a href="{{ url('/contact-us')}}">Contact Us</a></li>
+                                </ul>
+                                <br>
+                                <h4>Our Project</h4>
+
+                                <ul>
+                                    <li><a href="{{ url('/projects/current-upcomming')}}">Current/Upcomming </a></li>
+                                    <li><a href="{{ url('/projects/the-sail-melaka')}}">The Sail Melaka</a></li>
+                                    <li><a href="{{ url('/projects/nova-jalan-ampang')}}">The Nova Jalan Ampang</a></li>
+                                    <li><a href="{{ url('/projects/regalia-melaka')}}">Regalia Melaka </a></li>
+                                    <li><a href="{{ url('/projects/metrasquare-melaka')}}">MetraSquare Melaka  </a></li>
+                                    <li><a href="{{ url('/projects/ames-hotel-melaka')}}">Ames Hotel Melaka </a></li>
+                                    <li><a href="{{ url('/projects/nyra-hotel-melaka')}}">Nyra Hotel Melaka  </a></li>
                                 </ul>
 
                             </div>
@@ -54,77 +63,75 @@
 
                         <div class="col-md-4">
 
-                            <div class="widget clearfix">
-                                <h4>Recent Posts</h4>
+                            <div class="widget widget_links clearfix">
 
-                                <div class="posts-sm row col-mb-30" id="post-list-footer">
-                                    <div class="entry col-12">
-                                        <div class="grid-inner row">
-                                            <div class="col">
-                                                <div class="entry-title">
-                                                    <h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
-                                                </div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li>10th July 2021</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <h4>Publication </h4>
 
-                                    <div class="entry col-12">
-                                        <div class="grid-inner row">
-                                            <div class="col">
-                                                <div class="entry-title">
-                                                    <h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-                                                </div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li>10th July 2021</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <ul>
+                                    <li><a href="{{ url('/about-us')}}">Post</a></li>
+                                    <li><a href="{{ url('/founder-and-chairman')}}">News</a></li>
+                                    <li><a href="{{ url('/awards')}}">Press</a></li>
+                                </ul>
+                                <br>
+                                <br>
+                                <h4>Quick Links</h4>
 
-                                    <div class="entry col-12">
-                                        <div class="grid-inner row">
-                                            <div class="col">
-                                                <div class="entry-title">
-                                                    <h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-                                                </div>
-                                                <div class="entry-meta">
-                                                    <ul>
-                                                        <li>10th July 2021</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li><a href="{{ url('/projects/current-upcomming')}}">ShengLife </a></li>
+                                    <li><a href="{{ url('/projects/the-sail-melaka')}}">STG</a></li>
+                                    <li><a href="{{ url('/projects/nova-jalan-ampang')}}">The Nova Jalan Ampang</a></li>
+                                    <li><a href="{{ url('/projects/regalia-melaka')}}">Legal Firm</a></li>
+                                    <li><a href="{{ url('/projects/regalia-melaka')}}">Ames Hotel</a></li>
+                                    <li><a href="{{ url('/projects/regalia-melaka')}}">Legal Firm</a></li>
+                                </ul>
+
                             </div>
-
                         </div>
                     </div>
 
                 </div>
 
                 <div class="col-lg-4">
-
+                    
                     <div class="row col-mb-50">
                         <div class="col-md-4 col-lg-12">
                             <div class="widget clearfix" style="margin-bottom: -20px;">
 
                                 <div class="row">
+                                    <div class="col-lg-12 ">
+                                        <h4>Business and Services</h4>
+                                    </div>
                                     <div class="col-lg-6 bottommargin-sm">
-                                        <div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
-                                        <h5 class="mb-0">Total Downloads</h5>
+                                        <div class="widget widget_links clearfix">
+
+                                            
+                                            <ul>
+                                                <li><a href="{{ url('/business-and-services/about-us')}}">Real Estate</a></li>
+                                                <li><a href="{{ url('/business-and-services/founder-and-chairman')}}">Hospitality</a></li>
+                                                <li><a href="{{ url('/business-and-services/one-stop-center')}}">One Stop Center</a></li>
+                                                <li><a href="{{ url('/business-and-services/heathcare')}}">Heathcare</a></li>
+                                                
+                                            </ul>
+                                            <br>
+                                        </div>
+
+                                        
                                     </div>
 
                                     <div class="col-lg-6 bottommargin-sm">
-                                        <div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-                                        <h5 class="mb-0">Clients</h5>
+                                        <div class="widget widget_links clearfix">
+
+                                            
+            
+                                            <ul>
+                                                <li><a href="{{ url('/business-and-services/agriculture')}}">Agriculture</a></li>
+                                                <li><a href="{{ url('/business-and-services/legal-firm')}}">Legal Firm</a></li>
+                                                <li><a href="{{ url('/business-and-services/publication')}}">Publication</a></li>
+                                                <li><a href="{{ url('/business-and-services/fashion')}}">Fashion</a></li>
+                                                <li><a href="{{ url('/business-and-services/e-commerce')}}">e-commerce</a></li>
+                                            </ul>
+                                            <br>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -185,7 +192,7 @@
             <div class="row col-mb-30">
 
                 <div class="col-md-6 text-center text-md-start">
-                    Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
+                    Copyrights &copy; Sheng Tai International Sdn Bhd <?php echo date("Y"); ?> All Rights Reserved.<br>
                     <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
                 </div>
 
@@ -196,35 +203,11 @@
                             <i class="icon-facebook"></i>
                         </a>
 
-                        <a href="#" class="social-icon si-small si-borderless si-twitter">
-                            <i class="icon-twitter"></i>
-                            <i class="icon-twitter"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-gplus">
-                            <i class="icon-gplus"></i>
-                            <i class="icon-gplus"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-pinterest">
-                            <i class="icon-pinterest"></i>
-                            <i class="icon-pinterest"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-vimeo">
-                            <i class="icon-vimeo"></i>
-                            <i class="icon-vimeo"></i>
-                        </a>
-
                         <a href="#" class="social-icon si-small si-borderless si-github">
                             <i class="icon-github"></i>
                             <i class="icon-github"></i>
                         </a>
 
-                        <a href="#" class="social-icon si-small si-borderless si-yahoo">
-                            <i class="icon-yahoo"></i>
-                            <i class="icon-yahoo"></i>
-                        </a>
 
                         <a href="#" class="social-icon si-small si-borderless si-linkedin">
                             <i class="icon-linkedin"></i>
@@ -234,7 +217,7 @@
 
                     <div class="clear"></div>
 
-                    <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+                    <i class="icon-envelope2"></i>info@shengtaiinternational.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +6011 3737 3399<span class="middot"></span>
                 </div>
 
             </div>

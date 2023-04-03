@@ -81,9 +81,6 @@ class PostController extends Controller
                 $post->image=  $post_imageDB;
             }
            
-          
-         
-    
             
             $post->user_id= Auth::guard('admin')->user()->id;  
             if($post->title != $data['title'] )

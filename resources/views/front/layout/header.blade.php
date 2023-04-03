@@ -29,62 +29,109 @@
 
                     <ul class="menu-container">
                         <li class="menu-item">
-                            <a class="menu-link" href="index.html"><div>Home</div></a>
+                            <a class="menu-link" href="{{url('/home')}}"><div>Home</div></a>
                             
                         </li>
                         <li class="menu-item">
                             <a class="menu-link" href="#"><div>About Us</div></a> 
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>Founder and Chairman</div></a>
+                                    <a class="menu-link" href="{{url('/about-us')}}"><div>About Sheng Tai International</div></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>Business And Services</div></a>
+                                    <a class="menu-link" href="{{url('/founder-and-chairman')}}"><div>Founder and Chairman</div></a>
+                                </li>
+                               
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/awards')}}"><div>Awards</div></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>4 Columns</div></a>
+                                    <a class="menu-link" href="{{url('/awards')}}"><div>Milestone</div></a>
                                 </li>
-                                
-                            
                             </ul>                          
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#"><div>Services</div></a>                            
+                            <a class="menu-link" href="#"><div>Business and Services</div></a>                            
+                            <ul class="sub-menu-container">
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/real-estate')}}"><div>Real Estate</div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/hospitality')}}"><div>Hospitality </div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/one-stop-center')}}"><div>One Stop Center</div></a>
+                                </li>                                
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/heathcare')}}"><div>Heath Care</div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/agriculture')}}"><div>Agriculture</div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/legal-firm')}}"><div>Legal Firm</div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/publication')}}"><div>Publication </div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/fashion')}}"><div>Fashion and Lifestyle </div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{url('/business-and-services/e-commerce')}}"><div>E-commerce </div></a>
+                                </li>
+                                
+                            
+                            </ul>
                         </li>
                         <li class="menu-item">
                             <a class="menu-link" href="#"><div>Projects</div></a>  
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>About Our Dato President</div></a>
+                                    <a class="menu-link" href="{{ url('/projects/current-upcomming')}}"><div>Current / Upcomming</div></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>Business And Services</div></a>
+                                    <a class="menu-link" href="{{ url('/projects/the-sail-melaka')}}"><div>The Sail Melaka</div></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>4 Columns</div></a>
+                                    <a class="menu-link" href="{{ url('/projects/novo-jalan-ampang')}}"><div>Novo Jalan Ampang</div></a>
                                 </li>
-                                
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ url('/projects/regalia-melaka')}}"><div>Regalia Melaka </div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ url('/projects/metrasquare-melaka')}}"><div>MetraSquare Melaka </div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ url('/projects/ames-hotel-melaka')}}"><div>Ames Hotel Melaka </div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ url('/projects/nyra-hotel-melaka')}}"><div>Nyra Hotel Melaka </div></a>
+                                </li>
                             
                             </ul>                              
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#"><div>Media</div></a>                            
+                            <a class="menu-link" href="{{ url('/media/all')}}"><div>Media</div></a>                            
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#"><div>Videos</div></a>                            
+                            <a class="menu-link" href="{{ url('/videos/all')}}"><div>Videos</div></a>                            
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="#"><div>Contact Us</div></a>                            
+                            <a class="menu-link" href="{{ url('/career')}}"><div>Careers</div></a>                            
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="{{ url('/contact-us')}}"><div>Contact Us</div></a>                            
                         </li>
                        
                         <li class="menu-item">
-                            <a class="menu-link" href="shop.html"><div>Language</div></a>
+                            <a class="menu-link" href="{{ url('/projects/current-upcomming')}}"><div>Language</div></a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>Eng</div></a>
+                                    <a class="menu-link" href="{{ url('/projects/current-upcomming')}}"><div>Eng</div></a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="shop.html"><div>CN</div></a>
+                                    <a class="menu-link" href="{{ url('/projects/current-upcomming')}}"><div>CN</div></a>
                                 </li>                               
                                 
                             

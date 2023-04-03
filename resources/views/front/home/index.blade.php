@@ -135,12 +135,139 @@
 		
 		}
  	
+
+
+    /* ----- | Story-Box | ----- */
+.story-box {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+
+.story-box .story-box-image {
+	width: 70%;
+	height: 500px;
+	z-index: 2;
+	overflow: hidden;
+	-ms-flex-preferred-size: auto;
+	flex-basis: auto;
+}
+
+.story-box .story-box-image img {
+	display: block;
+	height: auto;
+	width: 100%;
+	opacity: 1;
+	transition: opacity .3s ease;
+}
+
+.story-box:hover .story-box-image img {
+	opacity: .9;
+}
+
+.story-box .story-box-info {
+	box-sizing: border-box;
+	width: 50%;
+	height: 430px;
+	padding: 60px;
+	margin: 35px 0 0 -20%;
+	background: #fff;
+	z-index: 4;
+	box-shadow: 0 10px 45px rgba(0,0,0,.1);
+	transition: all ease-in .3s;
+	-ms-flex-preferred-size: auto;
+	flex-basis: auto;
+}
+
+.story-box.description-left .story-box-info {
+	-ms-flex-order: -1;
+	order: -1;
+	margin: 35px -20% 0 0;
+}
+
+.story-box .story-box-info .story-title {
+  font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0;
+	color: #1d2c4c;
+}
+
+.story-box .story-box-info .story-box-content p {
+	font-size: 15px;
+
+	line-height: 1.8px;
+}
+
+.story-box .story-box-info .story-box-content a {
+	font-size: 16px;
+	text-decoration: underline !important;
+}
+
+/* ----- Story-Box Responsive ----- */
+@media (max-width: 991px) {
+
+	.story-box .story-box-image {
+		height: auto;
+		width: 100%;
+		height: 400px;
+		-ms-flex-order: -1;
+		order: -1;
+	}
+
+	.story-box.description-left .story-box-info {
+		-ms-flex-order: -1;
+		order: -1;
+		margin: 35px -20% 0 0;
+	}
+
+	.story-box.description-left .story-box-info { margin: -40px 5% 0; }
+
+	.story-box .story-box-info {
+		max-width: 90%;
+		height: auto;
+		-ms-flex-preferred-size: 90%;
+		flex-basis: 90%;
+		margin: -40px 5% 0;
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.story-box.description-left .story-box-info { margin: -100px 5% 0; }
+	.story-box .story-box-info {
+		padding: 35px;
+		text-align: center;
+		margin: -100px 5% 0;
+	}
+	.customers-count { border-right: none }
+}
+
+@media (max-width: 479px) {
+
+	.story-box .story-box-info {
+		width: 100%;
+		padding: 15px;
+		text-align: center;
+		margin: -200px 5% 0;
+	}
+	.story-box.description-left .story-box-info { margin: -200px 5% 0; }
+
+	ul.tab-nav:not(.tab-nav-lg) li a i {display: none;}
+}
+
+
+
       </style>
 @endsection
 
 @section('content')
 
-    @include('front.home.hero_slider')
+{{-- @include('front.home.hero_slider') --}}
+	
+			<livewire:front.home.hero-slider :language="'en'" />
 
 <!-- Content
 		============================================= -->
@@ -148,6 +275,21 @@
 			<div class="content-wrap">
 
 				<div class="container clearfix">
+
+          <div class="story-box description-left clearfix">
+            <div class="story-box-image">
+              <img src="images/home/1.jpg" alt="story-image">
+            </div>
+            <div class="story-box-info">
+              <h3 class="story-title">WELCOME TO  <span>SHENG TAI INTERNATIONAL</span></h3>
+              <div class="story-box-content">
+                <p>Sheng Tai International is a dynamic and diversified company specializing in development, real estate, investment management, and hospitality. We offer professional services with a warm, humanistic approach and cater to luxury, upscale, and economy markets.</p>
+                <button class="fw-light button ms-0 button-rounded">Read Canvas's story</button>
+              </div>
+            </div>
+          </div>
+
+
 					<div class="row align-items-center col-mb-50 mb-5">
 						<div class="col-md-4 center">
 							<img data-animate="fadeInLeft" src="images/home/homecompanyLOGO.jpg" alt="Iphone" class="fadeInLeft animated">
@@ -165,7 +307,7 @@
 					
 				</div>
 				
-				<div class="section carousel-section parallax m-0 dark skrollable skrollable-between" style="background-image: url(&quot;images/home/bg-carousel.jpg&quot;); min-height: 1500px; padding: 150px 0px; background-position: 0px -80%;" data-bottom-top="background-position:0% 20%;" data-top-bottom="background-position:0px 140%;">
+				<div class="section carousel-section parallax m-0 dark skrollable skrollable-between" style="background-image: url(&quot;images/home/bg-carousel.jpg&quot;); min-height: 1200px; padding: 100px 0px; background-position: 0px -80%;" data-bottom-top="background-position:0% 0%;" data-top-bottom="background-position:0px 100%;">
 
 					<div class=" clearfix">
 							<div class="w-100 mh20 bg-gradient__linear--sky-fade-top position-absolute top-0" style="height:0vh;z-index:2"></div>
@@ -200,277 +342,7 @@
 
 					</div>
 
-					<div class="container pt-5 clearfix">
-
-						<div class="heading-block center">
-							<h3>Some of our <span>Featured</span> Works</h3>
-							<span>We have worked on some Awesome Projects that are worth boasting of.</span>
-						</div>
-						
-						<div class="row gutter-40 col-mb-80">
-							<div class="postcontent col-lg-9">
-								<div class="fancy-title title-border">
-									<h4>News</h4>
-								</div>
-								<div class="row gutter-40">
-									<div class="entry col-12">
-										<div class="w-100">
-											<div class="owl-carousel product-carousel carousel-widget" data-margin="30" data-pagi="false" data-autoplay="5000" data-items-xs="1" data-items-md="2" data-items-lg="3" data-items-xl="4">
-
-									<div class="oc-item posts-md">
-										<div class="entry ">
-											<div class="grid-inner">
-											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
-											<a href="#"><img src="front/posts/test1.jpg" alt="Image" style="width: 100%;height: auto;"></a>
-											</div>
-											<div class="entry-title title-sm nott">
-											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
-											</div>
-											<div class="entry-meta">
-											<ul>
-											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-											</ul>
-											</div>
-											<div class="entry-content">
-											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
-											</div>
-											</div>
-										</div>
-									</div>
-									<div class="oc-item posts-md">
-										<div class="entry">
-											<div class="grid-inner">
-											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
-											<a href="#"><img src="front/posts/test2.jpg" alt="Image" style="width: 100%;height: auto;"></a>
-											</div>
-											<div class="entry-title title-sm nott">
-											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
-											</div>
-											<div class="entry-meta">
-											<ul>
-											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-											</ul>
-											</div>
-											<div class="entry-content">
-											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
-											</div>
-											</div>
-										</div>
-									</div>
-									<div class="oc-item posts-md">
-										<div class="entry">
-											<div class="grid-inner">
-											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
-											<a href="#"><img src="front/posts/test2.jpg" alt="Image" style="width: 100%;height: auto;"></a>
-											</div>
-											<div class="entry-title title-sm nott">
-											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
-											</div>
-											<div class="entry-meta">
-											<ul>
-											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-											</ul>
-											</div>
-											<div class="entry-content">
-											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
-											</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="oc-item posts-md">
-										<div class="entry">
-											<div class="grid-inner">
-											<div class="entry-image"  style="width: 200px;height: 150px;overflow: hidden;">
-											<a href="#"><img src="front/posts/test3.jpg" alt="Image" style="width: 100%;height: auto;"></a>
-											</div>
-											<div class="entry-title title-sm nott">
-											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
-											</div>
-											<div class="entry-meta">
-											<ul>
-											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-											</ul>
-											</div>
-											<div class="entry-content">
-											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
-											</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="oc-item posts-md">
-										<div class="entry">
-											<div class="grid-inner">
-											<div class="entry-image" style="width: 200px;height: 150px;overflow: hidden;">
-											<a href="#"><img src="front/posts/test4.jpg" alt="Image" style="width: 100%;height: auto;"></a>
-											</div>
-											<div class="entry-title title-sm nott">
-											<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
-											</div>
-											<div class="entry-meta">
-											<ul>
-											<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-											<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-											</ul>
-											</div>
-											<div class="entry-content">
-											<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
-											</div>
-											</div>
-										</div>
-									</div>
-									
-
-								</div>
-								<div class="d-flex justify-content-between my-5">
-									
-									<a href="#" class="btn btn-outline-dark">More News</a>
-								</div>
-										</div>
-
-
-										<div class="fancy-title title-border">
-											<h4>Events</h4>
-										</div>
-										<div class="row posts-md col-mb-30">
-											<div class="entry col-md-6">
-												<div class="grid-inner">
-													<div class="entry-image">
-														<a href="#"><img src="images/magazine/thumb/11.jpg" alt="Image"></a>
-													</div>
-													<div class="entry-title title-sm nott">
-														<h3><a href="blog-single.html">Toyotas next minivan will let you shout at your kids without turning around</a></h3>
-													</div>
-													<div class="entry-meta">
-														<ul>
-															<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-															<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-														</ul>
-													</div>
-													<div class="entry-content">
-														<p>Medecins du Monde eradicate sustainability free expression contribution assessment expert humanitarian relief.</p>
-													</div>
-												</div>
-											</div>
-			
-											<div class="entry col-md-6">
-												<div class="grid-inner">
-													<div class="entry-image">
-														<a href="#"><img src="images/magazine/thumb/14.jpg" alt="Image"></a>
-													</div>
-													<div class="entry-title title-sm nott">
-														<h3><a href="blog-single.html">UK government weighs Tesla's Model S for its ??5 million electric vehicle fleet</a></h3>
-													</div>
-													<div class="entry-meta">
-														<ul>
-															<li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-															<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-														</ul>
-													</div>
-													<div class="entry-content">
-														<p>Urban public institutions life-saving women and children Rockefeller combat malaria honesty. Sustainability foster immunize treatment.</p>
-													</div>
-												</div>
-											</div>
-											
-											
-										</div>
-										
-									</div>
-									<div class="d-flex justify-content-between my-5">
-									
-										<a href="#" class="btn btn-outline-dark">More Events</a>
-									</div>
-								</div>
-							</div>
-							<div class="sidebar col-lg-3">
-								<div class="sidebar-widgets-wrap">
-									
-									<div class="fancy-title title-border">
-										<h4>Press Story</h4>
-									</div>
-										<div class="posts-sm row col-mb-30" id="post-list-sidebar">
-										<div class="entry col-12">
-										<div class="grid-inner row g-0">
-										<div class="col-auto">
-										<div class="entry-image">
-										<a href="#"><img src="images/magazine/small/3.jpg" alt="Image"></a>
-										</div>
-										</div>
-										<div class="col ps-3">
-										<div class="entry-title">
-										<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
-										</div>
-										<div class="entry-meta">
-										<ul>
-										<li>10th July 2021</li>
-										</ul>
-										</div>
-										</div>
-										</div>
-										</div>
-										<div class="entry col-12">
-										<div class="grid-inner row g-0">
-										<div class="col-auto">
-										<div class="entry-image">
-										<a href="#"><img src="images/magazine/small/2.jpg" alt="Image"></a>
-										</div>
-										</div>
-										<div class="col ps-3">
-										<div class="entry-title">
-										<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-										</div>
-										<div class="entry-meta">
-										<ul>
-										<li>10th July 2021</li>
-										</ul>
-										</div>
-										</div>
-										</div>
-										</div>
-										<div class="entry col-12">
-										<div class="grid-inner row g-0">
-										<div class="col-auto">
-										<div class="entry-image">
-										<a href="#"><img src="images/magazine/small/3.jpg" alt="Image"></a>
-										</div>
-										</div>
-										<div class="col ps-3">
-										<div class="entry-title">
-										<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-										</div>
-										<div class="entry-meta">
-										<ul>
-										<li>10th July 2021</li>
-										</ul>
-										</div>
-										</div>
-										</div>
-										</div>
-										</div>
-										<div class="d-flex justify-content-between my-5">
-									
-											<a href="#" class="btn btn-outline-dark">More Press</a>
-										</div>
-										<div class="widget clearfix">
-											<div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-items="1" data-margin="10" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="true">
-
-												<div class="oc-item"><a href="#"><img src="front/posts/test4.jpg" alt="Clients"></a></div>
-												<div class="oc-item"><a href="#"><img src="front/posts/test4.jpg" alt="Clients"></a></div>
-												
-		
-											</div>
-
-										</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<livewire:front.home.post-list />
 				
 				
 				<a href="#" class="button button-full center text-end footer-stick">

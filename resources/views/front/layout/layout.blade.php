@@ -4,7 +4,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="SemiColonWeb" />
-
+	@yield('head')
 	<!-- Stylesheets
 	============================================= -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
@@ -27,8 +27,8 @@
 	<title>Home - Corporate Layout 2 | Canvas</title>
   @livewireStyles
 </head>
-
-<body class="stretched ">
+ 
+<body class="stretched  ">
 
 	<!-- Document Wrapper
 	============================================= -->

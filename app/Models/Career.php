@@ -13,4 +13,10 @@ class Career extends Model
     {
         return $this->hasMany(JobApplicant::class);
     }
+
+    public function the_permalink(){
+
+      
+        return url('career/job/'.$this->id.'/'.str_slug($this->title));
+    }
 }

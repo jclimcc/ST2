@@ -74,4 +74,46 @@ class Post extends Model
     public function nextPost(){
         return Post::where('id', '>', $this->id)->orderBy('id')->first();
     }
+   
+    public function the_author(){
+        return $this->user->name;
+    }
+    function my_custom_time_format($datetime, $format) {
+        $date = date($format, strtotime($datetime));
+        return $date;
+    }
+    public function the_time($format ='jS F Y' ){
+        return $this->my_custom_time_format($this->created_at, $format);
+    }
+
+    public function the_tags(){
+    
+        $string= "";
+        foreach($this->tags as $tag)
+        {
+            $string.='<a href="'.$tag->the_permalink().'">'.$tag->tag.'</a>';
+        }
+        return $string;
+       }
+    public function the_related_post(){
+        $tags = $this->tags()->pluck('tags.id');
+      
+        // Find related posts based on shared tags
+        $relatedPosts = Post::whereHas('tags', function ($query) use ($tags) {
+            $query->whereIn('tags.id', $tags);
+        })->where('posts.id', '<>', $this->id)
+          ->orderBy('created_at', 'desc')
+          ->take(4)
+          ->get();
+          return $relatedPosts;
+    }
+    public function get_the_post_image_url()
+    {       
+        return url('front/posts/'.$this->image); 
+    }    
+    public function the_permalink(){
+
+      
+        return url('media/'.$this->categories[0]->slug.'/'.$this->id.'/'.$this->slug);
+    }
 }

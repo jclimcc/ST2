@@ -37,8 +37,6 @@
                        
                         <form class="forms-sample" @if(empty($banner)) action="{{ url('admin/add-edit-banner/')}}" @else action="{{ url('admin/add-edit-banner/'.$banner['id'])}}"  @endif  method="POST" enctype="multipart/form-data">
                             @csrf
-                           
-                            
                             <div class="form-group">
                                 <label for="title">Title</label>
                                 <input type="text" name="title" value="{{ !empty($banner)? $banner['title']:""}}" class="form-control" id="title" placeholder="Enter title" >

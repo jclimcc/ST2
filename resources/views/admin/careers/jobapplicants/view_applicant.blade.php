@@ -23,7 +23,7 @@
                         <h4 class="card-title" style="margin-bottom: 0px;">Email: {{ $applicant['email']}} </h4>
                         <h4 class="card-title" style="margin-bottom: 0px;">Phone: {{ $applicant['phone']}}</h4>
                         <h4 class="card-title" style="margin-bottom: 0px;">Resume: 
-                            <a class="btn btn-primary btn-sm" target="_blank" href="{{ url('front/resume/'.$applicant['resume']) }}">
+                            <a class="btn btn-primary btn-sm" target="_blank" href="{{ url('uploads/resume/'.$applicant['resume']) }}">
                                 <i class="mdi mdi-account-card-details">
                                 </i>
                                 File

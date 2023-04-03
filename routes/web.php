@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\Front\PostController as FrontPostController;
+use App\Http\Controllers\Page\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomePage;
+use App\Http\Livewire\Front\Page\BusinessAndServices;
+use App\Http\Livewire\Front\Page\ProjectPage;
+use App\Http\Livewire\Front\Page\MediaPostPage;
+use App\Http\Controllers\Admin\JobApplicantController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +24,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',HomePage::class);
+Route::get('/home',[PageController::class,'homePage']);
+Route::get('/founder-and-chairman',HomePage::class);
+Route::get('/awards',HomePage::class);
+Route::get('/about-us',HomePage::class);
+Route::get('/contact-us',[PageController::class,'contactusPage']);
+Route::get('/business-and-services/{type?}',BusinessAndServices::class ); 
+Route::get('/projects/{project?}',ProjectPage::class ); 
+Route::get('/media/all',[FrontPostController::class,'mediaAll'] );
+Route::get('/media/tags/all',[FrontPostController::class , 'mediaTagAll']);
+Route::get('/media/tags/{tag_id}/{tag_slug}/all',[FrontPostController::class , 'mediaTagFilter']);
+Route::get('/media/{category_slug}/all',[FrontPostController::class,'mediaCategoryPost'] ); 
+Route::get('/media/{category}/{post_id}/{slug}',[FrontPostController::class,'mediaPost'] ); 
+Route::get('/videos/all',[PageController::class,'videoPage'] );
+
+Route::get('/career',[PageController::class,'careerPage'] );
+Route::get('/career/job/{job_id}/{job_slug}',[PageController::class , 'careerApplyPage']);
+Route::POST('career/jobapplicant/store',[JobApplicantController::class , 'applicantStore']);
 
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function(){
 

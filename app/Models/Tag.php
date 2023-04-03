@@ -24,4 +24,12 @@ class Tag extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+
+    public function the_permalink(){
+
+        return url('media/tags/'.$this->id.'/'.$this->slug.'/all');
+        //media-tag-all.blade.. is hardcode the link
+    }
+
+    
 }
